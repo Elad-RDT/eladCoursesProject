@@ -156,7 +156,7 @@ if(courseCounts.rows.length>0){
  
 for (let i = 0; i < courseCounts.rows.length; i++) {
     console.log('count: '+courseCounts.rows[i].user_count)
-    if (courseCounts.rows[i].user_count < 2) {
+    if (courseCounts.rows[i].user_count < 22) {
         console.log('i: '+i)
         lowestCount = courseCounts.rows[i].user_count;
         lowestCountCourseName = courseCounts.rows[i].course_name;
@@ -171,7 +171,7 @@ for (let i = 0; i < courseCounts.rows.length; i++) {
             res.status(400).send('error')
         }
     }
-    if(courseCounts.rows[i].user_count >= 2 && i==courseCounts.rows.length-1){
+    if(courseCounts.rows[i].user_count >= 22 && i==courseCounts.rows.length-1){
         console.log(courseCounts.rows)
         let checknum = 0;
          courseCounts.rows.map((val)=>{
